@@ -1,0 +1,76 @@
+.NavBar {
+    display: flex;
+    background: transparent;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+    background: gray;
+  }
+  
+  .Categories {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .Option {
+
+    text-decoration: none;
+    border-radius: 25;
+    margin: 0 50px;
+    width: auto;
+    padding: 12px;
+    font-size: 12px;
+    background: #11f311;
+    border-radius: 8px;
+    flex: none;
+    display: flex;
+    order: 1;
+    align-self: center;
+    flex-grow: 0;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-style: none;
+    cursor: pointer;
+    outline: inherit;
+    color: black;
+  }
+
+  .Inicio{
+    text-decoration: none;
+    border-radius: 25;
+    margin: 0 50px;
+    width: auto;
+    padding: 12px;
+    font-size: 16px;
+    background: #0a0a0a;
+    border-radius: 8px;
+    flex: none;
+    display: flex;
+    order: 1;
+    align-self: center;
+    flex-grow: 0;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-style: none;
+    cursor: pointer;
+    outline: inherit;
+    color: rgb(255, 255, 255);
+  }
+
+  
+  .NavLink {
+    color :rgb(255, 0, 0)
+  }
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+   }
+   .Imagen {
+    height: 50px;
+    width: 50px;
+   }
+   
