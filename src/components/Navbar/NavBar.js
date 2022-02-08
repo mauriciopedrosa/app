@@ -1,27 +1,64 @@
 import './NavBar.css'
+import Boton from '../Boton/Boton'
 
 //llamo un funcion para crear el objeto navbar
 const NavBar = () => {
+
+
+    const opcionInicio = () => {
+      console.log('Home')
+    }
+    const opcionCervezas = () => {
+      console.log('Cervezas')
+    }
+
+    const opcionVinos = () => {
+      console.log('Vinos')
+    }
+
+    const opcionAperitivos = () => {
+      console.log('Aperitivos')
+    }
+
+    const opcionWiskys = () => {
+      console.log('Wiskys')
+    }
+
+    const opcionEspumantes = () => {
+      console.log('Espumantes')
+    }
+
     return (
-      <nav className = 'NavBar'>
+        <nav className="NavBar" >
           <div className = 'Imagen'>
               <img src={'./images/logo192.png'} alt='logo'></img>
-          </div>
-          <div>
-              <h2>Tienda De Bedidas</h2>
-          </div>
-          <div className="Categories">
-              <button className='Inicio'>Inicio</button>
-              <button className='Option'>Vinos</button>
-              <button className='Option'>Aperitivos</button>
-              <button className='Option'>Cervezas</button>
-              <button className='Option'>Espumantes</button>
-              <button className='Option'>Wiskys</button>                            
           </div>          
+          <div>
+              <h2>Tienda de Bebidas</h2>
+          </div>
 
-      </nav>
+          <div className="Categories">
+              <Boton handleClick={opcionInicio}>
+                Inicio
+              </Boton>                     
+              <Boton handleClick={opcionCervezas}>
+                Cervezas
+              </Boton>
+              <Boton handleClick={opcionVinos}>
+                Vinos
+              </Boton>
+              <Boton handleClick={opcionAperitivos}>
+                Aperitivos
+              </Boton>
+              <Boton handleClick={opcionWiskys}>
+                Wiskys
+              </Boton>
+              <Boton handleClick={opcionEspumantes}>
+                Espumantes
+              </Boton>                        
+          </div>
+        </nav>
     )
   }
-
-
+  
   export default NavBar
