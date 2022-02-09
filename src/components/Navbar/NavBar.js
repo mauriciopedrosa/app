@@ -1,5 +1,6 @@
 import './NavBar.css'
 import Boton from '../Boton/Boton'
+import Carrito from '../Carrito/Carrito'
 
 //llamo un funcion para crear el objeto navbar
 const NavBar = () => {
@@ -28,6 +29,12 @@ const NavBar = () => {
       console.log('Espumantes')
     }
 
+    const opcionCarrito = () => {
+      console.log('Carrito')
+    }
+
+
+
     return (
         <nav className="NavBar" >
           <div className = 'Imagen'>
@@ -55,8 +62,10 @@ const NavBar = () => {
               </Boton>
               <Boton handleClick={opcionEspumantes}>
                 Espumantes
-              </Boton>                        
+              </Boton>    
+                                 
           </div>
+          <Carrito /> 
         </nav>
     )
   }
