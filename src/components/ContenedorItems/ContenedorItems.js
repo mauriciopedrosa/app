@@ -8,7 +8,7 @@ const ContenedorItems = ({titulo = 'LISTA DE ITEMS'}) => {
     return ( 
         <div className='ContenedorItems'>
             <h1>{titulo}</h1>  
-            <Contador stock={5} inicial ={1} onAdd={resolverOnAdd}/>
+            <Contador stock={10} inicial ={1} onAdd={resolverOnAdd}/>
         </div>
     )
 }
