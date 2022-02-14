@@ -1,0 +1,52 @@
+.container-buton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* min-width: 13%; */
+    width: 200px;
+    border: 2px solid black;
+    border-radius: 7px;
+    padding: 5px;
+}
+
+.container-agregar-restar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 150px;
+}
+
+.container-agregar-restar button {
+    background-color: transparent;
+    border: none;
+    border-radius: 100%;
+    cursor: pointer;
+    font-size: 17px;
+    width: 38px;
+    height: 38px;
+    transition: all 0.3s ease-in-out;
+}
+
+.container-agregar-restar button:hover {
+    background-color: aquamarine;
+}
+
+.add {
+    background-color: aquamarine;
+    color: black;
+    border: none;
+    border-radius: 7px;
+    padding: 5px;
+    font-size: 17px;
+}
+
+.disabled {
+    background-color: aquamarine;
+    color: black;
+    border: none;
+    border-radius: 7px;
+    padding: 5px;
+    font-size: 17px;
+    opacity: 0.3;
+    cursor: not-allowed;
+}

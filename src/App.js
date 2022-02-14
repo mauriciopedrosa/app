@@ -1,16 +1,21 @@
 import './App.css';
 import NavBar from './components/Navbar/NavBar';
-import ItemList from './components/ItemListContainer/ItemListContainer';
-//ya me reconocio la importacion del navbar desde mi carpeta componentes
+import ContenedorItems from './components/ContenedorItems/ContenedorItems';
+
 
 function App() {
+
+
+
   return (
     <div className="App">
       <NavBar />
-      <ItemList />
+      <ContenedorItems />
+   
     </div>
 
   );
 }
+
 
 export default App;
