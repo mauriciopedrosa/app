@@ -1,13 +1,12 @@
 import { useState } from 'react';
 import './Contador.css';
 
+
     const Contador = ({stock = 1,inicial = 1, onAdd}) => {
         const [cantidad,setCantidad] =useState(inicial);
  
         const agregar = () => {
-            if(cantidad < stock){
-            setCantidad(cantidad + 1)
-            }
+            cantidad < stock && setCantidad(cantidad + 1) //&& es para hacer un if sin el else es igual que abajo pero saimplificado
 
         }
         const restar = () => {
@@ -29,4 +28,4 @@ import './Contador.css';
         )
     }
 
-export default Contador
+export default Contador 
