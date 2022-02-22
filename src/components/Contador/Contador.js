@@ -17,7 +17,7 @@ import './Contador.css';
             <div align="center">
                 <h3>{cantidad}</h3>
                 <button onClick={restar}>-</button>
-                <button onClick={() => console.log(`se agregaron${cantidad}`)}>Agregar</button>                
+                <button onClick={() => console.log(`se agregaron ${cantidad} unidades`)}>Agregar</button>                
                 <button onClick={agregar}>+</button>
  
             </div>
