@@ -1,69 +1,34 @@
 import './NavBar.css'
-import Boton from '../Boton/Boton'
 import Carrito from '../Carrito/Carrito'
+import { useEffect, useState } from 'react'
+import { NavLink } from 'react-router-dom'
+import { traerCategorias } from '../../simulado/productos'
 
 //llamo un funcion para crear el objeto navbar
 const NavBar = () => {
+    const [categorias,setCategorias] = useState([])
 
-
-    const opcionInicio = () => {
-      console.log('Home')
-    }
-    const opcionCervezas = () => {
-      console.log('Cervezas')
-    }
-
-    const opcionVinos = () => {
-      console.log('Vinos')
-    }
-
-    const opcionAperitivos = () => {
-      console.log('Aperitivos')
-    }
-
-    const opcionWiskys = () => {
-      console.log('Wiskys')
-    }
-
-    const opcionEspumantes = () => {
-      console.log('Espumantes')
-    }
-
-    const opcionCarrito = () => {
-      console.log('Carrito')
-    }
-
-
+    useEffect(() => {
+      traerCategorias()
+      .then(categorias => {
+        setCategorias(categorias)
+      })
+    }, [])
+    console.log(categorias);
 
     return (
         <nav className="NavBar" >
           <div className = 'Imagen'>
-              <img src={'./images/logo192.png'} alt='logo'></img>
+              <img src={'../images/logo192.png'} alt='logo'></img>
           </div>          
-          <div>
+          <div className='Titulo'>
               <h2>Tienda de Bebidas</h2>
           </div>
 
           <div className="Categories">
-              <Boton handleClick={opcionInicio}>
-                Inicio
-              </Boton>                     
-              <Boton handleClick={opcionCervezas}>
-                Cervezas
-              </Boton>
-              <Boton handleClick={opcionVinos}>
-                Vinos
-              </Boton>
-              <Boton handleClick={opcionAperitivos}>
-                Aperitivos
-              </Boton>
-              <Boton handleClick={opcionWiskys}>
-                Wiskys
-              </Boton>
-              <Boton handleClick={opcionEspumantes}>
-                Espumantes
-              </Boton>    
-                                 
+            {categorias.map(cat => <NavLink key={cat.id} to={`/category/${cat.id}`} className={({ isActive }) =>
+                isActive ? 'ActiveOption' : 'Option'
+            }>{cat.descripcion}</NavLink>)}
           </div>
           <Carrito /> 
         </nav>

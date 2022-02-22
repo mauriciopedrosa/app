@@ -6,22 +6,18 @@ import './Contador.css';
         const [cantidad,setCantidad] =useState(inicial);
  
         const agregar = () => {
-            cantidad < stock && setCantidad(cantidad + 1) //&& es para hacer un if sin el else es igual que abajo pero saimplificado
-
+            cantidad < stock && setCantidad(cantidad + 1) 
         }
         const restar = () => {
-            if(cantidad > 0) { 
-                setCantidad(cantidad - 1)
-            }
+            cantidad > 0 &&  setCantidad(cantidad - 1)
         }
 
 
         return(
             <div align="center">
-                <h3>Contador</h3>
                 <h3>{cantidad}</h3>
                 <button onClick={restar}>-</button>
-                <button onClick={() => onAdd(cantidad)}>Agregar al Carrito</button>                
+                <button onClick={() => onAdd(cantidad)}>Agregar</button>                
                 <button onClick={agregar}>+</button>
  
             </div>

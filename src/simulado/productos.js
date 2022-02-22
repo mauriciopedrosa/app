@@ -1,5 +1,5 @@
-export const productos = [
-    {
+const productos = [
+    {   
         id: 1,
         name: 'Aberlour Single Malt 12 Años escocés 700 mL ',
         stock: 10,
@@ -33,8 +33,36 @@ export const productos = [
     },
 ];
 
-export const traerProductos = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        resolve(productos);
-    }, 2000);
-});
+
+const categorias = [
+    {id: 'vinos', descripcion: 'Vinos'},
+    {id: 'wiskies', descripcion: 'Wiskies'},
+    {id: 'cervezas', descripcion: 'Cervezas'},      
+    {id: 'aperitivos', descripcion: 'Aperitivos'}     
+]
+
+export const traerProductos = (idCategoria)=> {
+    return new Promise((resolve) => {
+        const productosFiltrados = idCategoria ? productos.filter(item => item.category === idCategoria) : productos
+        setTimeout(() => {
+            resolve(productosFiltrados);
+        }, 2000);
+    })
+}
+
+export const traerProducto = (id) => {
+    return new Promise((resolve) => {
+        const productoFiltrado = productos.find(p => p.id === parseInt(id))
+        setTimeout(() => {
+            resolve(productoFiltrado)
+        }, 1000)
+    })
+}
+
+export const traerCategorias = () => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(categorias)
+        }, 1000)
+    })
+}
