@@ -1,10 +1,13 @@
 import './Carrito.css'
 
-const Carrito = ({handleClick, children, ...rest}) => {
-
-    return (
-        <button className="miCarrito" onClick={handleClick}>{children}</button>
-    )
+const Carrito = () => {
+    return(
+        <button className="MiCarrito">
+            <img src="/images/cart.svg" alt='cart' className='CartImg'/>
+            0
+        </button>
+    );
 }
+
 
 export default Carrito
